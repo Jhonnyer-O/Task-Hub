@@ -3,7 +3,7 @@ import { supabase } from './supabase';
 import Swal from 'sweetalert2';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 
 // Interceptor para inyectar automáticamente el token de Supabase en cada petición
